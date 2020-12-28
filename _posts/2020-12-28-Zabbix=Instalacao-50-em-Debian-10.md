@@ -12,4 +12,4 @@ keywords: "zabbix, mysql"
 
 ### Video
 
-<div class="video-container"><iframe src="https://www.youtube.com/embed/8GN-nyxkgbE frameborder="0" allowfullscreen></iframe></div>
+<div class="video-container"><iframe src="https://www.youtube.com/embed/8GN-nyxkgbE" frameborder="0" allowfullscreen></iframe></div>
