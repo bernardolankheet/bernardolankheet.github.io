@@ -1,11 +1,11 @@
 Gem::Specification.new do |spec|
 	spec.name          = "thinkspace"
 	spec.version       = "2.5.0"
-	spec.authors       = ["Bernardo Lankheet"]
-	spec.email         = ["bernardoglankheet@gmail.com"]
+	spec.authors       = ["Heiswayi Nrird"]
+	spec.email         = ["heiswayi@nullableobject.com"]
 
-	spec.summary       = "Concentrador de conteudo"
-	spec.homepage      = "www.bernardolankheet.com.br"
+	spec.summary       = "A minimalist Jekyll theme"
+	spec.homepage      = "https://github.com/heiswayi/thinkspace"
 	spec.license       = "MIT"
 
 	spec.metadata["plugin_type"] = "theme"
