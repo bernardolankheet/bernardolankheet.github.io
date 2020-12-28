@@ -1,7 +1,11 @@
 ---
 layout: page
-title: About
+title: Quem é Bernardo Lankheet?
 permalink: /about/
 ---
 
-Introduce yourself here... so people will know who you are and what you do.. blah..blah..blah..
+Bernardo Lankheet⁣
+IT Expert ⁣👨‍💻
+Entusiasta/curioso automação, monitoramento e observabilidade.
+Dicas/videos sobre soluções Opensource.
+Capixaba - 🇧🇷
