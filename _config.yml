@@ -3,7 +3,7 @@ title_left    : "Bernardo"
 title_right   : "Lankheet" # default: ""
 description   : "De tudo um pouco"
 keywords      : "Jekyll, theme, free, download, SEO, blog, web, minimalist, thinkspace"
-url           : https://bernardolankheet.github.io/ # site url
+url           : https://bernardolankheet.github.io # site url
 baseurl       : "" # apply repo name like "/myproject" if used under gh-pages branch, else (under master branch) just leave empty/blank
 cover         : "" # image uri like logo/cover image for site seo
 
