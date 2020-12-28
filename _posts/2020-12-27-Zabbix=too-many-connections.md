@@ -12,4 +12,4 @@ Ambiente deste caso:
 - Banco: 10.3.18-MariaDB-0+deb10u1
 
 #### Post Original!
-https://medium.com/zabbix-brasil/case-comunidade-z3001-error-too-many-connections-afbfa049d9b3
+- **Link:** https://medium.com/zabbix-brasil/case-comunidade-z3001-error-too-many-connections-afbfa049d9b3
