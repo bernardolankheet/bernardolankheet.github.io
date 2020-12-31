@@ -6,8 +6,8 @@ layout: page
 
 
 
-<p>🤷‍ Monitoring, DevOps Student and content creation!  
-  💼 Working as a Monitoring Analist.</p>
+<p>🤷‍ Monitoring, DevOps Student and content creation!\
+   Working as a Monitoring Analist.</p>
 
 <h2>Stack</h2>
 
@@ -22,7 +22,7 @@ layout: page
 	<li>Jenkins</li>
 	<li>Git</li>	
 	<li>Python</li>	
-	<li>TDD e Continuous Integration</li>
+	<li>Continuous Integration</li>
 </ul>
 
 <h2>Projetos</h2>
@@ -30,5 +30,5 @@ layout: page
 <ul>
 	<li><a href="https://www.instagram.com/bernardolank">📸 Instagram - [@bernardolank]</a></li>
 	<li><a href="https://medium.com/@bernardolankheet">✏️ Medium Posts - [@bernardolankheet]</a></li>
-	<li><a href="https://youtube.com/">🎬 Youtube Channel - Under construction</a></li>
+	<li><a href="https://youtube.com/channel/UCTFH_J83ayNu6cz3stYxptg">🎬 Youtube Channel - [bernardolank]</a></li>
 </ul>
