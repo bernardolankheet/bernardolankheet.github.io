@@ -34,23 +34,24 @@ disqus:
   categories: #[blog, project] # only show disqus for posts that have these categories
 
 # if you don't have any of social below, comment the line
-# facebook: myfacebook
-# twitter: mytwitter
+# email: myemail@gmail.com
 instagram: bernardolank
-# pinterest: mypinterest
+github: bernardolankheet
+telegram: bernardolankheet
 linkedin: bernardo-lankheet
 youtube: channel/UCTFH_J83ayNu6cz3stYxptg
+medium: bernardolankheet
 # spotify: myspotify
-github: bernardolankheet
+# pinterest: mypinterest
+# facebook: myfacebook
+# twitter: mytwitter
 # gitlab: mygitlab
 # lastfm: mylastfm
 # stackoverflow: 7044681/mystackoverflow
 # quora: userquora
 # reddit: username
-medium: bernardolankheet
 # vimeo: myvimeo
 # lanyrd: mylanyrd
-# email: myemail@gmail.com
 
 authors:
   bernardolankheet:
