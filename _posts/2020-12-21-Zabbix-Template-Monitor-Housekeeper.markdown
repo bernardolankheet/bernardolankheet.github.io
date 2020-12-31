@@ -49,9 +49,9 @@ BR: Sempre que a manutenção é realizada pelo zabbix-server, uma linha é gera
 # ° SCREENSHOTS
 
 ![Grafico1](https://github.com/bernardolankheet/Zabbix-Monitor-Housekeeper/blob/main/img/01.jpg?raw=true)
-![Grafico2](https://github.com/bernardolankheet/Zabbix-Monitor-Housekeeper/tree/main/img/02.jpg)
-![Grafico3](https://github.com/bernardolankheet/Zabbix-Monitor-Housekeeper/tree/main/img/03.jpg)
-![Grafico4](https://github.com/bernardolankheet/Zabbix-Monitor-Housekeeper/tree/main/img/04.jpg)
+![Grafico2](https://github.com/bernardolankheet/Zabbix-Monitor-Housekeeper/blob/main/img/02.jpg?raw=true)
+![Grafico3](https://github.com/bernardolankheet/Zabbix-Monitor-Housekeeper/blob/main/img/03.jpg?raw=true)
+![Grafico4](https://github.com/bernardolankheet/Zabbix-Monitor-Housekeeper/blob/main/img/04.jpg?raw=true)
 
 
 ---
