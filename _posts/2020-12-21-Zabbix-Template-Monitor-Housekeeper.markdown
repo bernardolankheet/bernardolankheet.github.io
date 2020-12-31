@@ -14,7 +14,7 @@ externalLink: false
 ---
 
 # Zabbix-Monitor-Housekeeper
-![alt tag](https://github.com/bernardolankheet/Zabbix-Monitor-Housekeeper/tree/main/img/zabbix_logo.png)
+![Logo](https://github.com/bernardolankheet/Zabbix-Monitor-Housekeeper/blob/main/img/zabbix_logo.png?raw=true)
 
 Project Name: Zabbix-Monitor-Housekeeper\
 Author: Bernardo Lankheet\
@@ -48,10 +48,10 @@ BR: Sempre que a manutenção é realizada pelo zabbix-server, uma linha é gera
 
 # ° SCREENSHOTS
 
-![alt tag](https://github.com/bernardolankheet/Zabbix-Monitor-Housekeeper/tree/main/img/01.jpg)
-![alt tag](https://github.com/bernardolankheet/Zabbix-Monitor-Housekeeper/tree/main/img/02.jpg)
-![alt tag](https://github.com/bernardolankheet/Zabbix-Monitor-Housekeeper/tree/main/img/03.jpg)
-![alt tag](https://github.com/bernardolankheet/Zabbix-Monitor-Housekeeper/tree/main/img/04.jpg)
+![Grafico1](https://github.com/bernardolankheet/Zabbix-Monitor-Housekeeper/blob/main/img/01.jpg?raw=true)
+![Grafico2](https://github.com/bernardolankheet/Zabbix-Monitor-Housekeeper/tree/main/img/02.jpg)
+![Grafico3](https://github.com/bernardolankheet/Zabbix-Monitor-Housekeeper/tree/main/img/03.jpg)
+![Grafico4](https://github.com/bernardolankheet/Zabbix-Monitor-Housekeeper/tree/main/img/04.jpg)
 
 
 ---
