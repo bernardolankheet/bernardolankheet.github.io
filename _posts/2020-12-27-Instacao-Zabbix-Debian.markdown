@@ -8,7 +8,7 @@ headerImage: true
 projects: true
 hidden: true # don't count this post in blog pagination
 description: "Instalação Zabbix 5.0 no Debian 10 via Pacotes."
-category: project
+category: blog
 author: Bernardo
 externalLink: false
 ---
