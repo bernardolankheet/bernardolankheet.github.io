@@ -6,8 +6,8 @@ layout: page
 
 
 
-<p>🤷‍ Monitoring, DevOps Student and content creation!\
-   Working as a Monitoring Analist.</p>
+<p>🤷‍ Monitoring, DevOps Student and content creation!  
+Working as a Monitoring Analist.</p>
 
 <h2>Stack</h2>
 
