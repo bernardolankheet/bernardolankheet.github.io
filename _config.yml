@@ -39,7 +39,7 @@ disqus:
 instagram: bernardolank
 # pinterest: mypinterest
 linkedin: bernardo-lankheet
-youtube: bernardolank
+youtube: channel/UCTFH_J83ayNu6cz3stYxptg
 # spotify: myspotify
 github: bernardolankheet
 # gitlab: mygitlab
@@ -78,7 +78,7 @@ projects: true
 
 # if you don't need "about" or "blog", comment them out below
 about: true
-blog: false
+blog: true
 
 # do you want to show the "read time" of the posts?
 read-time: true
