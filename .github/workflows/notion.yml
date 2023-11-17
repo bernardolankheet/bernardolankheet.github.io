@@ -1,0 +1,36 @@
+name: Sync Notion pages to posts
+
+on:
+  schedule:
+    - cron: '0 13 * * *' # daily
+
+  workflow_dispatch:
+
+jobs:
+  get_and_commit_notions_posts:
+    runs-on: ubuntu-latest
+    environment: github-pages
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: notion-jam
+        uses: victornpb/notion-jam@v0.0.13
+        with:
+          NOTION_SECRET: ${{ secrets.NOTION_TOKEN}}
+          NOTION_DATABASE: ${{ secrets.NOTION_ROOT_PAGE_ID }}
+          FILTER_PROP: ${{ vars.FILTER_PROP }}
+          FILTER_VALUES: ${{ vars.FILTER_VALUES }}
+          ARTICLE_PATH: _posts/${{ vars.POST_URI }}.md
+          ASSETS_PATH: public/images/${{ vars.POST_URI }}/
+          PARALLEL_PAGES: 25
+          PARALLEL_DOWNLOADS_PER_PAGE: 3
+          DOWNLOAD_IMAGE_TIMEOUT: 30
+
+      - name: Save changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: 'docs: add new post'
+      - uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
