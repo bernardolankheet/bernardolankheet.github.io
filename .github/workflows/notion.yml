@@ -16,7 +16,7 @@ jobs:
       - name: notion-jam
         uses: victornpb/notion-jam@v0.0.13
         with:
-          NOTION_SECRET: ${{ secrets.NOTION_TOKEN }}
+          NOTION_SECRET: ${{ secrets.NOTION_SECRET }}
           NOTION_DATABASE: ${{ secrets.NOTION_ROOT_PAGE_ID }}
           FILTER_PROP: ${{ vars.FILTER_PROP }}
           FILTER_VALUES: ${{ vars.FILTER_VALUES }}
