@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- B letter - dark gray -->
+  <path d="M45 10 L45 25 L70 25 Q85 25 85 40 Q85 50 75 55 Q88 60 88 75 Q88 90 70 90 L45 90 L45 75 L65 75 Q72 75 72 68 Q72 60 65 60 L45 60 L45 45 L62 45 Q68 45 68 38 Q68 30 62 30 L45 30 L45 10 Z" fill="#3d3d3d"/>
+  
+  <!-- L letter - blue -->
+  <path d="M12 10 L12 90 L55 90 L55 75 L28 75 L28 10 Z" fill="#1976D2"/>
+  
+  <!-- Arrow accent on top - dark gray -->
+  <path d="M12 10 L35 10 L55 30 L35 30 Z" fill="#3d3d3d"/>
+</svg>

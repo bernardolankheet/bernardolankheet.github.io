@@ -1,42 +1,35 @@
-<p align="center">
-    <h2 align="center">Repositorio do <a href="https://www.bernardolankheet.com.br">site</a></h2>
-</p>
+# O projeto
+As páginas são escritas no formato [Markdown], e para renderizar utilizamos o [Mkdocs](http://www.mkdocs.org).
 
-***
+## Boas práticas
+- Verifique se há links quebrados
+- Evite alterar endereços: eles podem ser referenciados em outras fontes
 
-<p align="center">
-    <b><a href="README.md#what-has-inside">Projeto</a></b>
-    |
-    <b><a href="README.md#setup">Configuração</a></b>
-    |
-    <b><a href="README.md#settings">Alterações Necessarias</a></b>
-    |
-    <b><a href="README.md#how-to">Como funciona</a></b>
-</p>
+### Mas se ainda precisar alterar.. 
+https://github.com/dkhamsing/awesome_bot
 
-
-## Setup
-
-0. Posts ficam disponiveis dentro do diretorio posts;
-1. Altere as configurações necessarias dentro do arquivo `_config.yml`
-
-
-
-## Settings
-
-You must fill some informations on `_config.yml` to customize your site.
-
-```
-name: Bernardo Lankheet
-bio: 'IT' me'
-picture: 'assets/images/profile.jpg'
-...
-
-bla bla bla
+```sh
+gem install awesome_bot
+find docs -name '*.md' -exec grep -l http {} + | xargs awesome_bot -t 10 --allow-dupe --allow-ssl --allow-redirect --base-url http://127.0.0.1:8000 --skip-save-results
 ```
 
-## Referencia
----
-<p align="center">
-    <h2 align="center">Baseado no Template de Servio Kopplin - <a href="https://sergiokopplin.github.io/indigo/">INDIGO</a></h2>
-</p>
+## Rodando localmente
+* clone o repositório
+
+```bash
+  $ git clone https://github.com/benlankheet/portifolio.git
+```
+
+
+* dentro da pasta `portfolio`, execute os comandos abaixo (Python 3.x necessário):
+
+```bash
+  $ python3 -m venv .venv
+  $ .venv\Scripts\activate  # Para Windows
+  $ pip install -r requirements.txt
+  $ mkdocs serve
+  # Acesse http://127.0.0.1:8000 no navegador
+```
+
+
+* O site rodará por padrão em http://127.0.0.1:8000

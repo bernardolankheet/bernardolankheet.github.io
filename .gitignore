@@ -1,6 +1,6 @@
-.DS_Store
-_site
-.sass-cache
-Gemfile.lock
-.bundle
-vendor/
+public/
+.venv/
+test/
+.idea/
+__pycache__/
+*.pyc

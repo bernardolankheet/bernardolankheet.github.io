@@ -1,0 +1,108 @@
+site_name: Bernardo Lankheet - DevOps
+site_author: Bernardo
+site_url: "https://bernardolankheet.github.io/portfolio/"
+copyright: "Bernardo Lankheet © 2026"
+#repo_url: "https://github.com/romdhanisam/portfolio/"
+#repo_name: "romdhanisam/portfolio"
+docs_dir: docs
+site_dir: public
+
+nav:
+  - About: index.md
+  - Certifications: certifications.md
+  - Contributions: contributions.md
+  - Skills: skills.md
+  - Projects: projects.md
+  - Presentations: presentations.md
+  - Contact: contact.md
+
+theme:
+  name: material
+  language: pt
+  favicon: assets/images/logo-bl.svg
+  logo: assets/images/logo-bl.svg
+  custom_dir: docs/overrides
+  palette:
+    - scheme: slate
+      primary: blue
+      accent: blue
+  font:
+    text: Roboto
+    code: Fira Mono
+  features:
+    - navigation.tabs
+    - navigation.top
+    - navigation.footer
+    - navigation.instant
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+    - content.code.annotate
+    - content.tabs.link
+    - content.action.edit
+    - content.action.view
+
+plugins:
+  - neoteroi.mkdocsoad:
+      use_pymdownx: true
+  - include-markdown
+  - search
+  - i18n:
+      default_language: pt
+      languages:
+        - locale: pt
+          name: Português-BR
+          default: true
+          build: true
+          site_name: "Bernardo Lankheet | DevOps"
+          nav_translations:
+            About: Sobre mim
+            Contributions: Contribuições
+            Projects: Projetos
+            Certifications: Certificações
+            Skills: Habilidades
+            Presentations: Palestras
+            Contact: Contato
+        - locale: en
+          name: English
+          build: true
+          site_name: "Bernardo Lankheet | DevOps"
+          nav_translations:
+            About: About
+            Contributions: Contributions
+            Projects: Projects
+            Certifications: Certifications
+            Skills: Skills
+            Presentations: Presentations
+            Contact: Contact
+
+markdown_extensions:
+  - admonition
+  - def_list
+  - attr_list
+  - footnotes
+  - neoteroi.timeline
+  - neoteroi.cards
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - md_in_html
+  - tables
+  - pymdownx.highlight:
+      anchor_linenums: true
+      linenums: true
+      linenums_style: pymdownx.inline
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+extra_css:
+  - assets/css/extra.css
+  - assets/css/neoteroi-cards.css
+  - assets/css/neoteroi-mkdocs.css
+extra_javascript:
+  - assets/js/extra.js
+  - assets/js/tab-scroll.js
