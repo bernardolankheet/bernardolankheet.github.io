@@ -1,9 +1,7 @@
 site_name: Bernardo Lankheet - DevOps
 site_author: Bernardo
-site_url: "https://bernardolankheet.github.io/portfolio/"
+site_url: "https://bernardolankheet.github.io/"
 copyright: "Bernardo Lankheet © 2026"
-#repo_url: "https://github.com/romdhanisam/portfolio/"
-#repo_name: "romdhanisam/portfolio"
 docs_dir: docs
 site_dir: public
 
