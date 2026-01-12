@@ -20,7 +20,6 @@ find docs -name '*.md' -exec grep -l http {} + | xargs awesome_bot -t 10 --allow
   $ git clone https://github.com/benlankheet/portifolio.git
 ```
 
-
 * dentro da pasta `portfolio`, execute os comandos abaixo (Python 3.x necessário):
 
 ```bash

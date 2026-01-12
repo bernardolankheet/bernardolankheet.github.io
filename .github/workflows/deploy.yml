@@ -1,5 +1,4 @@
-name: Deploy Portfolio MkDocs
-
+name: Deploy MkDocs
 on:
   push:
     branches:
