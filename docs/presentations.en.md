@@ -2,6 +2,12 @@
 
 ::timeline::
 
+- title: Observabilidade com Opensource
+  sub_title: 2026-02
+  icon: ./assets/images/presentations/grafanaWfriends2026.jpg
+  content: |
+    <b>Grafana & Friends Espirito Santo</b> - Meetup Colatina<br><a href="https://github.com/bernardolankheet/presentations/blob/main/2026-02-23-grafana-friends-meetup-colatina" target="_blank">Material</a> | <a href="https://www.meetup.com/grafana-friends-espirito-santo" target="_blank">Event</a>
+
 - title: Deployment Strategies with Argo Rollout for Beginners
   sub_title: 2025-11
   icon: ./assets/images/presentations/dodsp2025.jpg
