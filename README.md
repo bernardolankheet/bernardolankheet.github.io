@@ -24,9 +24,10 @@ find docs -name '*.md' -exec grep -l http {} + | xargs awesome_bot -t 10 --allow
 
 ```bash
   $ python3 -m venv .venv
+  $ source .venv/bin/activate
   $ .venv\Scripts\activate  # Para Windows
   $ pip install -r requirements.txt
-  $ mkdocs serve
+  $ mkdocs serve  
   # Acesse http://127.0.0.1:8000 no navegador
 ```
 
