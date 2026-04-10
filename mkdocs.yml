@@ -107,3 +107,4 @@ extra_javascript:
 
 extra:
   turnstile_site_key: !ENV [TURNSTILE_SITE_KEY, ""]
+  turnstile_worker_url: !ENV [TURNSTILE_WORKER_URL, ""]

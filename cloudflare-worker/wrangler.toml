@@ -1,0 +1,8 @@
+name = "turnstile-validator"
+main = "src/index.js"
+compatibility_date = "2025-01-01"
+
+# TURNSTILE_SECRET_KEY is NOT stored here.
+# It is set as a Worker secret via:
+#   echo "your-secret" | wrangler secret put TURNSTILE_SECRET_KEY
+# In CI/CD it is injected from GitHub Secrets (see deploy.yml).

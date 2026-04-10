@@ -14,8 +14,48 @@
   <div class="cf-turnstile"
        data-sitekey="{{ config.extra.turnstile_site_key }}"
        data-theme="dark"
+       data-callback="onTurnstileSuccess"
+       data-error-callback="onTurnstileError"
        style="margin-top: 1.5rem;">
   </div>
+  <div id="turnstile-status" style="margin-top: 0.5rem; font-size: 0.85rem; display: none;"></div>
+  <script>
+    function onTurnstileSuccess(token) {
+      var workerUrl = "{{ config.extra.turnstile_worker_url | default('') }}";
+      if (!workerUrl) return;
+      fetch(workerUrl, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ token: token }),
+      })
+        .then(function (r) { return r.json(); })
+        .then(function (data) {
+          var el = document.getElementById("turnstile-status");
+          el.style.display = "block";
+          if (data.success) {
+            el.textContent = "✓ Verificado pelo Cloudflare";
+            el.style.color = "#4caf50";
+          } else {
+            el.textContent = "✗ Verificação falhou";
+            el.style.color = "#f44336";
+          }
+        })
+        .catch(function () {
+          var el = document.getElementById("turnstile-status");
+          el.style.display = "block";
+          el.textContent = "✗ Erro ao verificar";
+          el.style.color = "#f44336";
+        });
+    }
+    function onTurnstileError() {
+      var el = document.getElementById("turnstile-status");
+      if (el) {
+        el.style.display = "block";
+        el.textContent = "✗ Erro no desafio Turnstile";
+        el.style.color = "#f44336";
+      }
+    }
+  </script>
   {% endif %}
 {% endblock %}
 

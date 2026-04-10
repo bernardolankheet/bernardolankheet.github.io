@@ -12,7 +12,23 @@ permissions:
   id-token: write
 
 jobs:
+  worker:
+    name: Deploy Cloudflare Worker
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Deploy Turnstile validator Worker
+        working-directory: cloudflare-worker
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CF_ACCOUNT_ID }}
+        run: |
+          npm install -g wrangler
+          wrangler deploy
+          echo "${{ secrets.TURNSTILE_SECRET_KEY }}" | wrangler secret put TURNSTILE_SECRET_KEY
+
   mkdocs:
+    needs: worker
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -36,5 +52,6 @@ jobs:
       - name: Build and deploy to GitHub Pages
         env:
           TURNSTILE_SITE_KEY: ${{ vars.TURNSTILE_SITE_KEY }}
+          TURNSTILE_WORKER_URL: ${{ vars.TURNSTILE_WORKER_URL }}
         run: |
           mkdocs gh-deploy --force
