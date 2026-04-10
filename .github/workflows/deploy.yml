@@ -54,4 +54,9 @@ jobs:
           TURNSTILE_SITE_KEY: ${{ vars.TURNSTILE_SITE_KEY }}
           TURNSTILE_WORKER_URL: ${{ vars.TURNSTILE_WORKER_URL }}
         run: |
+          mkdir -p docs/assets/js
+          cat > docs/assets/js/turnstile-config.js <<'EOF'
+window.TURNSTILE_SITE_KEY = "${TURNSTILE_SITE_KEY}";
+window.TURNSTILE_WORKER_URL = "${TURNSTILE_WORKER_URL}";
+EOF
           mkdocs gh-deploy --force

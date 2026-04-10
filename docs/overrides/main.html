@@ -2,61 +2,69 @@
 
 {% block extrahead %}
   {{ super() }}
-  {% if config.extra.turnstile_site_key %}
   <link rel="preconnect" href="https://challenges.cloudflare.com" />
-  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-  {% endif %}
+  <script src="/assets/js/turnstile-config.js"></script>
+  <script>
+    (function(){
+      if (typeof window.TURNSTILE_SITE_KEY === 'string' && window.TURNSTILE_SITE_KEY.length) {
+        var s = document.createElement('script');
+        s.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js';
+        s.async = true; s.defer = true;
+        document.head.appendChild(s);
+      }
+    })();
+  </script>
 {% endblock %}
 
 {% block content %}
   {{ super() }}
-  {% if config.extra.turnstile_site_key %}
-  <div class="cf-turnstile"
-       data-sitekey="{{ config.extra.turnstile_site_key }}"
-       data-theme="dark"
-       data-callback="onTurnstileSuccess"
-       data-error-callback="onTurnstileError"
-       style="margin-top: 1.5rem;">
-  </div>
+  <div id="turnstile-wrapper" style="margin-top:1.5rem;"></div>
   <div id="turnstile-status" style="margin-top: 0.5rem; font-size: 0.85rem; display: none;"></div>
   <script>
-    function onTurnstileSuccess(token) {
-      var workerUrl = "{{ config.extra.turnstile_worker_url | default('') }}";
+    function _turnstile_on_success(token) {
+      var workerUrl = (window.TURNSTILE_WORKER_URL || '');
       if (!workerUrl) return;
       fetch(workerUrl, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ token: token }),
       })
-        .then(function (r) { return r.json(); })
-        .then(function (data) {
-          var el = document.getElementById("turnstile-status");
-          el.style.display = "block";
-          if (data.success) {
-            el.textContent = "✓ Verificado pelo Cloudflare";
-            el.style.color = "#4caf50";
-          } else {
-            el.textContent = "✗ Verificação falhou";
-            el.style.color = "#f44336";
-          }
-        })
-        .catch(function () {
-          var el = document.getElementById("turnstile-status");
-          el.style.display = "block";
-          el.textContent = "✗ Erro ao verificar";
-          el.style.color = "#f44336";
-        });
+      .then(function(r){ return r.json(); })
+      .then(function(data){
+        var el = document.getElementById('turnstile-status');
+        el.style.display = 'block';
+        if (data && data.success) {
+          el.textContent = '✓ Verificado pelo Cloudflare'; el.style.color = '#4caf50';
+        } else {
+          el.textContent = '✗ Verificação falhou'; el.style.color = '#f44336';
+        }
+      }).catch(function(){
+        var el = document.getElementById('turnstile-status'); el.style.display = 'block'; el.textContent = '✗ Erro ao verificar'; el.style.color = '#f44336';
+      });
     }
-    function onTurnstileError() {
-      var el = document.getElementById("turnstile-status");
-      if (el) {
-        el.style.display = "block";
-        el.textContent = "✗ Erro no desafio Turnstile";
-        el.style.color = "#f44336";
+    function _turnstile_on_error() {
+      var el = document.getElementById('turnstile-status'); if (el){ el.style.display='block'; el.textContent='✗ Erro no desafio Turnstile'; el.style.color='#f44336'; }
+    }
+    (function(){
+      var siteKey = (window.TURNSTILE_SITE_KEY || '');
+      if (!siteKey) return;
+      function render(){
+        var wrapper = document.getElementById('turnstile-wrapper');
+        if (!wrapper) return;
+        var div = document.createElement('div');
+        div.className = 'cf-turnstile';
+        div.setAttribute('data-sitekey', siteKey);
+        div.setAttribute('data-theme', 'dark');
+        div.setAttribute('data-callback', '_turnstile_on_success');
+        div.setAttribute('data-error-callback', '_turnstile_on_error');
+        wrapper.appendChild(div);
       }
-    }
+      if (window.turnstile) { render(); }
+      else {
+        var t = setInterval(function(){ if (window.turnstile){ clearInterval(t); render(); } }, 200);
+      }
+    })();
   </script>
-  {% endif %}
 {% endblock %}
 
 {% block footer %}
