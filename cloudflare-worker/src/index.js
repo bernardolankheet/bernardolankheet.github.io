@@ -1,4 +1,4 @@
-const ALLOWED_ORIGIN = "https://bernardolankheet.github.io";
+const ALLOWED_ORIGIN = "https://bernardolankheet.com.br";
 const SITEVERIFY_URL = "https://challenges.cloudflare.com/turnstile/v0/siteverify";
 
 const CORS_HEADERS = {
