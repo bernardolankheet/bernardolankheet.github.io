@@ -34,5 +34,7 @@ jobs:
         run: |
           pip install -r requirements.txt
       - name: Build and deploy to GitHub Pages
+        env:
+          TURNSTILE_SITE_KEY: ${{ vars.TURNSTILE_SITE_KEY }}
         run: |
           mkdocs gh-deploy --force

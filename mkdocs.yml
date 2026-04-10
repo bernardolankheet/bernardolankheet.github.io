@@ -104,3 +104,6 @@ extra_css:
 extra_javascript:
   - assets/js/extra.js
   - assets/js/tab-scroll.js
+
+extra:
+  turnstile_site_key: !ENV [TURNSTILE_SITE_KEY, ""]

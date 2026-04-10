@@ -1,7 +1,22 @@
 {% extends "base.html" %}
 
+{% block extrahead %}
+  {{ super() }}
+  {% if page and 'contact' in page.url and config.extra.turnstile_site_key %}
+  <link rel="preconnect" href="https://challenges.cloudflare.com" />
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  {% endif %}
+{% endblock %}
+
 {% block content %}
   {{ super() }}
+  {% if page and 'contact' in page.url and config.extra.turnstile_site_key %}
+  <div class="cf-turnstile"
+       data-sitekey="{{ config.extra.turnstile_site_key }}"
+       data-theme="dark"
+       style="margin-top: 1.5rem;">
+  </div>
+  {% endif %}
 {% endblock %}
 
 {% block footer %}
